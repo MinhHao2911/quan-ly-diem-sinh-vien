@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
+import streamlit as st
 import pandas as pd
-image.png
 import matplotlib.pyplot as plt
 """Hào09.ipynb
 
