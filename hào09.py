@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
+image.png
 import matplotlib.pyplot as plt
 """Hào09.ipynb
 
@@ -18,7 +19,7 @@ data ={
 df = pd.DataFrame(data)
 
 print("--- Bảng dữ liệu gốc ---")
-print(df)
+st.dataframe(df)
 print("\n" + "="*50 + "\n")
 
 # #2. Tính điểm tổng kết
@@ -26,7 +27,7 @@ df["Tong ket"] = (
      0.2 * df['Chuyen_can'] + 0.3 * df['Giua_ky'] + 0.5 * df[ "Cuối_kỳ" ])
 
 print("--- Bảng dữ liệu sau khi tính tổng kết ---")
-print(df)
+st.dataframe(df)
 print("\n" + "="*50 + "\n")
 
 # #3. xếp loại sinh viên
@@ -41,7 +42,7 @@ def xep_loai (diem):
      return "yeu"
 df['xep_loai'] = df["Tong ket"].apply(xep_loai)
 print("--- Bảng dữ liệu sau khi xếp loại ---")
-print(df)
+st.dataframe(df)
 print("\n" + "="*50 + "\n")
 
 # #4. Thống kê
@@ -64,5 +65,5 @@ plt.ylabel('sinh viên')
 plt.title('biểu đò thể hiện điểm tổng kết của 10 sinh viên')
 plt.gca().invert_yaxis() # đảo ngược trục y để sinh viên đầu tiên ở trên cùng
 plt.tight_layout()
-plt.show()
+st.pyplot(fig)
 
