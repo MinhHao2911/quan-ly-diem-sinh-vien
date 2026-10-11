@@ -58,12 +58,12 @@ print(f"- sinh viên có diểm thấp nhất: {sv_thap_nhat['Họ_và_tên']} (
 print(f"- số sinh viên đạt (>= 5.0): {so_SV_dat} / {len(df)} sinh viên")
 
 # #5. Trực quan hóa dữ liệu
-plt.figure(figsize=(8, 5))
-plt.barh(df['Họ_và_tên'], df["Tong ket"], color='skyblue')
-plt.xlabel("điểm tổng kết")
-plt.ylabel('sinh viên')
-plt.title('biểu đò thể hiện điểm tổng kết của 10 sinh viên')
-plt.gca().invert_yaxis() # đảo ngược trục y để sinh viên đầu tiên ở trên cùng
-plt.tight_layout()
+fig, ax = plt.subplots(figsize=(8, 5))
+ax.barh(df['Họ_và_tên'], df["Tong ket"], color='skyblue')
+ax.set_xlabel("điểm tổng kết")
+ax.set_ylabel('sinh viên')
+ax.set_title('biểu đò thể hiện điểm tổng kết của 10 sinh viên')
+ax.invert_yaxis() # đảo ngược trục y để sinh viên đầu tiên ở trên cùng
+fig.tight_layout()
 st.pyplot(fig)
 
