@@ -66,4 +66,4 @@ ax.set_title('biểu đò thể hiện điểm tổng kết của 10 sinh viên'
 ax.invert_yaxis() # đảo ngược trục y để sinh viên đầu tiên ở trên cùng
 fig.tight_layout()
 st.pyplot(fig)
-
+st.caption("Người thực hiện: [ Võ Trương Minh Hào] - MSSV: [09]")
